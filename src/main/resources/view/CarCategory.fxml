@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Car_Hire_Management.controller.CarCategoryController">
+   <children>
+      <AnchorPane fx:id="idText" layoutX="20.0" layoutY="20.0" prefHeight="761.0" prefWidth="935.0" style="-fx-border-color: #3742fa; -fx-background-color: #dff9fb;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="311.0" layoutY="14.0" prefHeight="18.0" prefWidth="309.0" text="Car Hire Management System">
+               <font>
+                  <Font name="Arial Bold" size="21.0" />
+               </font>
+            </Label>
+            <Line endX="147.60000610351562" endY="2.288818359375E-5" layoutX="463.0" layoutY="39.0" startX="-139.60000610351562" startY="2.288818359375E-5" />
+            <Label layoutX="14.0" layoutY="54.0" text="Car Category Form">
+               <font>
+                  <Font name="System Italic" size="19.0" />
+               </font>
+            </Label>
+            <Line endX="46.20001220703125" endY="0.9999923706054688" layoutX="123.0" layoutY="81.0" startX="-108.20002746582031" startY="1.52587890625E-5" />
+            <Label layoutX="14.0" layoutY="104.0" text="ID Number" />
+            <TextField fx:id="categoryIdText" layoutX="14.0" layoutY="122.0" prefHeight="26.0" prefWidth="378.0" promptText="ID Number" />
+            <Label layoutX="14.0" layoutY="162.0" text="Name" />
+            <TextField fx:id="categoryNameText" layoutX="13.0" layoutY="180.0" prefHeight="26.0" prefWidth="378.0" promptText="Name" />
+            <Button layoutX="92.0" layoutY="468.0" mnemonicParsing="false" onAction="#registerNewCarCategory" prefHeight="26.0" prefWidth="190.0" style="-fx-background-color: #3742fa;" text="Add New Category" textFill="#efefef">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="416.0" layoutY="731.0" mnemonicParsing="false" onAction="#mainMenuButton" prefHeight="26.0" prefWidth="98.0" style="-fx-background-color: #3742fa;" text="Main Menu" textFill="#efefef">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <TableView fx:id="carCategoryTable" layoutX="92.0" layoutY="233.0" onMouseClicked="#categoryTableMouseClick" prefHeight="200.0" prefWidth="687.0">
+               <columns>
+                  <TableColumn fx:id="categoryID" prefWidth="227.1999969482422" text="Category ID" />
+                  <TableColumn fx:id="categoryName" prefWidth="460.00006103515625" text="Category Name" />
+               </columns>
+            </TableView>
+            <Button layoutX="588.0" layoutY="468.0" mnemonicParsing="false" onAction="#updateCarCategory" prefHeight="26.0" prefWidth="190.0" style="-fx-background-color: #3742fa;" text="Update Car Category" textFill="#efefef">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
